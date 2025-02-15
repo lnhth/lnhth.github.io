@@ -131,10 +131,8 @@ canvas.addEventListener(events[deviceType].down, (event)=>{
 });
 
 canvas.addEventListener(events[deviceType].move, (event)=>{
-    if (!isTouchDevice()){
-        event.preventDefault();
-    }
     if(isDragged){
+        event.preventDefault();
         getXY(event);
         scratch(mouseX, mouseY);
     }
