@@ -19,7 +19,7 @@ let songs = [
     {
         name: 'best version of La Valse',
         path: 'music/lavalse.mp3',
-        artist: 'best  pianist'
+        artist: 'best  pianist (PHILLIP SHI)'
     }
 ];
 
