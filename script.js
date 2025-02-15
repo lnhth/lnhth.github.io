@@ -27,12 +27,12 @@ function rightBtnCursorP() {
 function openBook() {
     book.style.transform = "translateX(50%)";
     if (window.innerWidth <= 600) {
-        leftBtn.style.transform = "translateX(-380%)";
-        rightBtn.style.transform = "translateX(380%)";
+        leftBtn.style.transform = "translateX(-600%)";
+        rightBtn.style.transform = "translateX(600%)";
     }
     else {
-        leftBtn.style.transform = "translateX(-750%)";
-        rightBtn.style.transform = "translateX(750%)";
+        leftBtn.style.transform = "translateX(-1150%)";
+        rightBtn.style.transform = "translateX(1150%)";
     }
 }
 
