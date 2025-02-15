@@ -521,6 +521,7 @@ button:hover {
 
     #f1{
         border: 5px solid rgb(255, 191, 202);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .valBtns {
         font-size: 15px;
@@ -536,6 +537,7 @@ button:hover {
     }
 
     #b1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         gap: 2px;
     }
     .polas {
@@ -593,6 +595,8 @@ button:hover {
         bottom: 7.5%;
         left: 9px;
     }
+    #cotp{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     .date {
         top: 3px;
         width: 90px;
