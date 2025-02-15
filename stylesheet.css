@@ -1,0 +1,656 @@
+*:not(.date) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+/*book*/
+.book {
+    border-radius: 5px;
+    height: 450px;
+    width: 350px;
+    position: relative;
+    margin: 10px;
+    transition: transform 0.4s ease;
+}
+
+.page {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    perspective: 1500px;
+}
+
+.front, .back {
+    position: absolute;
+    background-color: rgb(255, 251, 245);
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: solid 2px antiquewhite;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content, .back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+}
+
+#p1 {
+    z-index: 3;
+}
+#p2 {
+    z-index: 2;
+}
+#p3 {
+    z-index: 1;
+}
+
+.front-content, .back-content {
+    background-image: url(img/gridBG.jpg);
+    box-shadow: 0 0 0 4px rgb(205, 205, 205) inset;
+    display: block;
+}
+
+/*front 1*/
+#f1 {
+    box-shadow: 0 0 0 0;
+    border: 10px solid rgb(255, 191, 202);
+    margin: auto;
+    text-align: center;
+    align-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    font-family: cursive;
+}
+#q-f1 {
+    transition: transform 0.4s;
+    margin-bottom: 5px;
+    color: rgb(45, 20, 20);
+}
+#subText-f1 {
+    margin-bottom: 5px;
+}
+#gif {
+    height: 60%;
+}
+
+.valBtns {
+    border: solid 2px rgb(255, 146, 164);
+    font-size: 20px;
+    border-radius: 50px;
+    padding: 5px;
+    margin: auto;
+    width: 120px;
+    background-color: rgb(255, 146, 164);
+    
+}
+#yesBtn {
+    color: white;
+    transition: 0.3s ease;
+    margin-right: 3px;
+}
+#yesBtn:hover {
+    border: solid 2px rgb(236, 55, 85);
+    background-color: rgb(236, 55, 85);
+    color: white;
+}
+#noBtn {
+    background-color: white;
+    color: rgb(255, 146, 164);
+    margin-left: 3px;
+}
+#noBtn:hover {
+    border: solid 2px rgb(236, 55, 85);
+    background-color: rgb(236, 55, 85);
+    color: white;
+}
+
+/*back 1*/
+#b1 {
+    margin: auto;
+    text-align: center;
+    align-content: center;
+    border-radius: 5px;
+    font-family:cursive;
+    display: grid;
+    grid-template: 2fr 1fr 1fr 1fr/ 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+}
+.polas {
+    height: 192px;
+    width: 125px;
+}
+.fpola:hover{
+    transform: scale(105%);
+}
+#b1 p {
+    margin-top: 5px;
+    grid-column: 1 / 3;
+}
+
+.container {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    position: relative;
+    height: 192px;
+    width: 125px;
+}
+.container:hover {
+    cursor: pointer;
+}
+.fpola {
+    transition: 0.2s ease;
+    position: absolute;
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+}
+.bpola {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    height: 100%;
+    width: 100%;
+    border-radius: 1%;
+}
+
+/*front 2*/
+#f2 {
+    text-align: center;
+    align-content: center;
+}
+#cd {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+#cd.play {
+    animation-play-state: running;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 85%;
+    height: 5px;
+    background-color: rgb(197, 221, 210);
+    margin: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 0;
+    height: 10px;
+    box-shadow: -400px 0 0 400px rgb(101, 123, 113);
+}
+.controls i{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer !important;
+    background-color: rgb(133, 194, 166);
+    color: white;
+    border-radius: 50%;
+    transition: ease 0.2s;
+}
+.controls i:hover{
+    background-color: rgb(116, 172, 146);
+}
+#playBtn{
+    border: solid 1.5px rgb(77, 119, 100);
+    color: rgb(77, 119, 100);
+    background-color: white;
+    transform: scale(1.5);
+    transition: ease 0.2s;
+}
+#playBtn:hover{
+    border: solid 1.5px rgb(46, 77, 63);
+    color: rgb(46, 77, 63);
+}
+#song-name{
+    color: rgb(48, 78, 64);
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#artist-name{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(59, 58, 15);
+}
+
+/*back 2*/
+.date {
+    width: 190px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid rgb(153, 145, 102);
+    border-radius: 10px;
+    background-color: rgb(253, 246, 212);
+    padding: 20px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    color: rgb(36, 33, 14);
+    position: relative;
+    top: 7px;
+}
+#days {
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    word-spacing: 14px;
+}
+#result {
+    font-size: 22px;
+}
+.date-result {
+    margin: 1px;
+    padding: 0;
+}
+.text-box {
+    z-index: 1;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(36, 33, 14, 0.541);
+    color: white;
+    padding: 10px;
+    width: 80%; 
+    text-align: center;
+    border-radius: 8px;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+.date:hover .text-box {
+    opacity: 1;
+}
+
+.ptb {
+    position: absolute;
+    left: 4%;
+    bottom: 24px;
+    cursor: pointer;
+    width: 200px;
+    height: 300px;
+    transition: 0.2s ease;
+}
+.ptb:hover{
+    transform: scale(101%);
+}
+#ptbText{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: rgb(36, 33, 14);
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#ptbText1{
+    color:rgb(36, 33, 14);
+    position: absolute;
+    left: 65%;
+    top: 35%;
+    text-align: right;
+    margin-right: 16px;
+}
+#ptbText2{
+    font-size: 13px;
+    position: absolute;
+    bottom: 1.5%;
+    left: 7%;
+}
+#cotp {
+    color: rgb(107, 81, 49);
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+#ptbText1, #ptbText2, #ptbText{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*front 3*/
+#f3{
+    display: flex;
+    align-items: center;
+}
+.envelope{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-bottom-right-radius: 2%;
+    border-bottom-left-radius: 2%;
+    position: relative;
+    width: 250px;
+    height: 170px;
+    background-color: rgb(215, 192, 124);
+    box-shadow: 0 1px 5px rgb(135, 126, 97);
+    transition: ease 0.3s;
+}
+.envelope:hover{
+    transform: scale(110%);
+    cursor: pointer;
+}
+.efront{
+    position: absolute;
+    z-index: 3;
+}
+.flap{
+    backface-visibility: hidden;
+    border-top: 95px solid rgb(228, 203, 128);
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    width: 100%;
+    height: 100%;
+    transform-origin: top;
+    z-index: 5;
+}
+.pocket{
+    border-bottom-right-radius: 2%;
+    border-bottom-left-radius: 2%;
+    border-bottom: 80px solid rgb(239, 228, 173);
+    border-left: 125px solid rgb(249, 238, 186);
+    border-right: 125px solid rgb(249, 238, 186);
+    border-top: 90px solid transparent;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.letter{
+    padding: 5px;
+    font-size: 13.5px;
+    z-index: 0;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 6px 2px rgb(205, 205, 205);
+    width: 200px;
+    height: 170px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.flap.open {
+    transform: rotateX(180deg);
+    transition: transform 0.4s ease-in, z-index 0.3s;
+    z-index: 1;
+}
+.close.flap {
+    transform: rotateX(0);
+    transition: transform 0.6s ease-in-out, z-index 1s;
+    transition-delay: 0.1s;
+    z-index: 5;
+}
+.close.letter {
+    transform: translateY(0);
+    transition: transform 0.5s ease, z-index 1.1s;
+    z-index: 1;
+}
+.open.letter {
+    transform: translateY(-90px);
+    transition: transform 0.4s ease-in, z-index 0.3s;
+    transition-delay: 0.3s;
+    z-index: 3;
+}
+
+/*back 3*/
+#b3{
+    display: flex;
+}
+.scratch-container{
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    border-radius: 5%;
+}
+.canvas, .scratch-card{
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    border-radius: 5%;
+    text-align: center;
+    cursor: grab;
+}
+.scratch-card{
+    background-image: url(img/love.jpg);
+    background-size: cover;
+}
+.canvas{
+    box-sizing: content-box;
+    border: solid 1.5px rgb(121, 38, 38);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.scratch-text{
+    position: relative;
+    bottom: 90px;
+    font-weight: 700;
+}
+.scratch-text2{
+    position: relative;
+    top: 87px;
+    font-size: 12px;
+}
+.scratch-text, .scratch-text2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*buttons*/
+button {
+    font-size: 30px;
+    border: 0;
+    background-color: transparent;
+    color: rgb(125, 118, 75);
+    z-index: 4;
+    transition: transform 0.4s ease, 0.3s ease;
+}
+
+button:hover {
+    color: rgb(44, 41, 24);
+    cursor: pointer;
+}
+
+#leftButton {
+    opacity: 0;
+    cursor: default;
+}
+
+/*flipping*/
+.flipped .front, .flipped .back {
+    transform: rotateY(-180deg);
+}
+
+
+/*mobile view*/
+@media screen and (max-width: 600px){
+    .book {
+        height: 220px;
+        width: 160px;
+    }
+    .front-content, .back-content {
+        font-size: 12px;
+    }
+    button {
+        font-size: 25px;
+    }
+
+    #f1{
+        border: 5px solid rgb(255, 191, 202);
+    }
+    .valBtns {
+        font-size: 15px;
+        border-radius: 50px;
+        padding: 3px;
+        width: 60px;
+    }
+    #q-f1 {
+        font-size: 18px;
+    }
+    #gif {
+        height: 100px;
+    }
+
+    #b1 {
+        gap: 2px;
+    }
+    .polas {
+        height: 92px;
+        width: 60px;
+    }
+    .container {
+        height: 92px;
+        width: 60px;
+    }
+
+    #cd {
+        width: 100px;
+        height: 100px;
+    }
+    #progress {
+        width: 80%;
+        height: 3px;
+        margin: 7px;
+    }
+    .controls i{
+        font-size: 7px;
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        margin-top: 7px;
+    }
+    #song-name{
+        font-size: 15px;
+    }
+    #artist-name{
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+
+    #ptbText{
+        top: 8px;
+        left: 5px;
+        font-size: 10px;
+    }
+    #ptbText1{
+        top: 40%;
+        margin: 0;
+        right: 9px;
+        font-size: 7.5px;
+    }
+    #ptbText2{
+        bottom: 2%;
+        font-size: 8px;
+        left: 15px;
+    }
+    .ptb {
+        height: 120px;
+        width: 85px;
+        bottom: 7.5%;
+        left: 9px;
+    }
+    .date {
+        top: 3px;
+        width: 90px;
+        height: 10px;
+    }
+    #result {
+        font-size: 12.5px;
+    }
+    #days {
+        font-size: 10px;
+        word-spacing: 5px;
+    }
+
+    .envelope{
+        width: 120px;
+        height: 90px;
+    }
+    .flap{
+        border-top: 50px solid rgb(228, 203, 128);
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+    }
+    .pocket{
+        border-bottom: 50px solid rgb(239, 228, 173);
+        border-left: 55px solid rgb(249, 238, 186);
+        border-right: 55px solid rgb(249, 238, 186);
+        border-top: 40px solid transparent;
+    }
+    .letter{
+        font-size: 6.5px;
+        width: 110px;
+        height: 90px;
+        padding: 4px;
+    }
+    .close.flap {
+        transition: transform 0.7s ease-in-out, z-index 0.9s;
+    }
+    .close.letter {
+        transition: transform 0.4s ease, z-index 0.9s;
+    }
+    .open.letter {
+        transform: translateY(-45px);
+    }
+
+    .scratch-container{
+        width: 120px;
+        height: 80px;
+    }
+    .canvas, .scratch-card{
+        width: 120px;
+        height: 80px;
+    }
+    .scratch-text{
+        font-size: 10px;
+        bottom: 52px;
+    }
+    .scratch-text2{
+        top: 50px;
+        font-size: 8px;
+    }
+}

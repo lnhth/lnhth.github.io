@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <title>valentines!!</title>
+        <script src="dateScript.js"></script>
+        
+        <script src="https://kit.fontawesome.com/a6a469d699.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <button id="leftButton">
+            <span>⮜</span>
+        </button>
+
+        <div class="book">
+            <div class="page" id="p1">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <h1 id="q-f1">will you be my <br>valentine?</h1>
+                        <p id="subText-f1"></p> 
+                        <img id="gif" src="img/pls.gif"> 
+                        <button class="valBtns" id="yesBtn">yes</button>
+                        <button class="valBtns" id="noBtn">no</button>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <p>some of our memories:</p>
+                        <div class="container">
+                            <div class="fpola">
+                                <img src="img/paintingP.png" class="polas">
+                            </div>
+                            <div class="bpola">
+                                <img src="img/paintingL.png" class="polas">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="fpola">
+                                <img src="img/concert1.png" class="polas">
+                            </div>
+                            <div class="bpola">
+                                <img src="img/concert2.png" class="polas">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="fpola">
+                                <img src="img/polaL.png" class="polas">
+                            </div>
+                            <div class="bpola">
+                                <img src="img/polaP.png" class="polas">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="fpola">
+                                <img src="img/polaroid.png" class="polas">
+                            </div>
+                            <div class="bpola">
+                                <img src="img/textPola.png" class="polas">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page" id="p2">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <audio src="" id="audio"></audio>
+                        <img src="img/cd.png" id="cd">
+                        <h1 id="song-name">song 1</h1>
+                        <p id="artist-name">artist</p>
+                        <input type="range" value="0" id="progress">
+                        <div class="controls">
+                            <i id="backBtn" class="fa-solid fa-backward"></i>
+                            <i id="playBtn" class="fa-solid fa-play"></i>
+                            <i id="forwardBtn" class="fa-solid fa-forward"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <p id="ptbText">hmm... so how long has it been?</p>
+                        <div class="date">
+                            <p id="result" class="date-result"></p> 
+                            <p id="days" class="date-result"> days hrs mins sec</p>
+                            <div class="text-box"> of being yours ♡</div>
+                        </div>
+                        <img src="img/firstPic.PNG" class="ptb">
+                        <div id="ptbText1">
+                            <p id="cotp"><i class="fa-solid fa-arrow-left-long"></i>click on the photo</p>
+                            <p>i hope we'll be spending many more new years together!! we have to make this a yearly thing and recreate this pic every yearrr</p>
+                        </div>
+                        <p id="ptbText2">31 dec. 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page" id="p3">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <div class="envelope-wrapper">
+                            <div class="envelope">
+                                <div class="efront flap close"></div>
+                                <div class="efront pocket close"></div>
+                                <div class="letter">
+                                    <p>dear my first valentine ever, <br> i'm so happy i get to spend this day with youu. you're so brilliant, smart, handsome, caring and most importantly, you make me the happiest ♡ <br> i love you and everything about you, happy valentines!! <br> -the best gf ever</p>
+                                </div>
+                                <div class="hearts">
+                                    <div class="heart1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <div class="scratch-container">
+                            <div class="scratch-card">
+                            </div>
+                            <canvas class="canvas"></canvas>
+                        </div>
+                        <div class="scratch-text">
+                            <p>a message for you!</p>
+                        </div>
+                        <div class="scratch-text2">
+                            <p>(scratch)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="rightButton">
+            <span>⮞</span>
+        </button>
+   
+        <script src="musicScript.js"></script>
+        <script src="script.js"></script>
+        <script src="ptbScript.js"></script>
+    </body>
+</html>
